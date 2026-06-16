@@ -1,28 +1,8 @@
-<?php
-
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-
-return new class extends Migration
+public function up()
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        Schema::table('drivers', function (Blueprint $table) {
-            //
-        });
-    }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::table('drivers', function (Blueprint $table) {
-            //
-        });
-    }
-};
+    Schema::table('drivers', function (Blueprint $table) {
+        $table->string('username')->unique()->after('plat_nomor'); // misal: budi123
+        $table->string('password')->after('username');
+        $table->boolean('is_verified')->default(false)->after('password'); // Admin perlu verifikasi
+    });
+}

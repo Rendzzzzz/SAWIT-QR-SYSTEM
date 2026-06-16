@@ -1,0 +1,23 @@
+{
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.php"
+    }
+  ],
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "DB_CONNECTION": "pgsql",
+    "DB_HOST": "@vercel_db_host",
+    "DB_PORT": "6543",
+    "DB_DATABASE": "@vercel_db_database",
+    "DB_USERNAME": "@vercel_db_username",
+    "DB_PASSWORD": "@vercel_db_password"
+  }
+}

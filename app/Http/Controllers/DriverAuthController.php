@@ -82,6 +82,7 @@ class DriverAuthController extends Controller
             'plat_nomor' => 'required',
         ]);
 
+        // Update driver data di Supabase
         $this->supabase->updateDriver($driverId, [
             'muatan_kg' => $request->muatan_kg,
             'plat_nomor' => $request->plat_nomor,
