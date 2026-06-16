@@ -1,6 +1,9 @@
 {
-  "deploy": {
+    "deploy": {
     "numReplicas": 1,
     "startCommand": "php artisan serve --host=0.0.0.0 --port=8000"
+  },
+  "scripts": {
+    "build": "echo 'Skipping view:cache'"
   }
 }
