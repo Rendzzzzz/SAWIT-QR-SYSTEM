@@ -10,8 +10,7 @@
         "bref/bref": "^3.0",
         "bref/laravel-bridge": "^3.0",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1",
-        "simplesoftwareio/simple-qrcode": "^4.2"
+        "laravel/tinker": "^2.10.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
