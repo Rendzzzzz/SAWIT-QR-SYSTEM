@@ -9,6 +9,7 @@
         "php artisan config:cache",
         "php artisan event:cache",
         "php artisan route:cache"
+        "skip": ["view:cache"]
       ]
     }
   }
